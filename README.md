@@ -36,7 +36,9 @@ Use the IntelliJ run configuration provided:
 
 * `Run Proposal Contract Tests`
 
-### run on windows cmd###
+## from Hung Do ###
+I cloned this repo from https://github.com/corda/negotiation-cordapp  with the purpose of creating a more functional negotiation flow
+* instructions to run from Windows cmd terminal
 taskkill /f /im java.exe
 
 gradlew clean deployNodes
