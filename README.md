@@ -37,8 +37,8 @@ Use the IntelliJ run configuration provided:
 * `Run Proposal Contract Tests`
 
 ## from Hung Do ###
-I cloned this repo from https://github.com/corda/negotiation-cordapp  with the purpose of creating a more functional negotiation flow
-Instructions to run from Windows cmd terminal
+I cloned this repo from https://github.com/corda/negotiation-cordapp  with the purpose of creating a more functional negotiation flow.
+Instructions to run from Windows cmd terminal:
 
 `taskkill /f /im java.exe`
 
@@ -51,9 +51,12 @@ Instructions to run from Windows cmd terminal
 `
 start ProposalFlow$Initiator role: Buyer, amount: 1000, counterparty: "O=PartyB,L=New York,C=US"
 `
+
 `flow start ModificationFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da", newAmount: 800
 `
+
 `flow start AcceptanceFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da"`
+
 
 `run vaultQuery contractStateType: com.negotiation.ProposalState`
 
