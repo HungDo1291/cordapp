@@ -35,3 +35,23 @@ Use the IntelliJ run configurations provided:
 Use the IntelliJ run configuration provided:
 
 * `Run Proposal Contract Tests`
+
+### run on windows cmd###
+taskkill /f /im java.exe
+
+gradlew clean deployNodes
+
+cd build/nodes
+
+runnodes
+
+
+start ProposalFlow$Initiator role: Buyer, amount: 1000, counterparty: "O=PartyB,L=New York,C=US"
+
+flow start ModificationFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da", newAmount: 800
+
+flow start AcceptanceFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da"
+
+run vaultQuery contractStateType: com.negotiation.ProposalState
+
+run vaultQuery contractStateType: com.negotiation.TradeState
