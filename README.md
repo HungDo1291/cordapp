@@ -38,22 +38,23 @@ Use the IntelliJ run configuration provided:
 
 ## from Hung Do ###
 I cloned this repo from https://github.com/corda/negotiation-cordapp  with the purpose of creating a more functional negotiation flow
-* instructions to run from Windows cmd terminal
-taskkill /f /im java.exe
+Instructions to run from Windows cmd terminal
 
-gradlew clean deployNodes
+`taskkill /f /im java.exe`
 
-cd build/nodes
+`gradlew clean deployNodes
+`
+`cd build/nodes`
 
-runnodes
+`runnodes`
 
-
+`
 start ProposalFlow$Initiator role: Buyer, amount: 1000, counterparty: "O=PartyB,L=New York,C=US"
+`
+`flow start ModificationFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da", newAmount: 800
+`
+`flow start AcceptanceFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da"`
 
-flow start ModificationFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da", newAmount: 800
+`run vaultQuery contractStateType: com.negotiation.ProposalState`
 
-flow start AcceptanceFlow$Initiator proposalId: "ac74252f-8a55-4b4d-b461-4dd576fa27da"
-
-run vaultQuery contractStateType: com.negotiation.ProposalState
-
-run vaultQuery contractStateType: com.negotiation.TradeState
+`run vaultQuery contractStateType: com.negotiation.TradeState`
